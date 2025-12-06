@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Task;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,8 @@ class TaskController extends Controller
      */
     public function create()
     {
-        return view('task.create');
+        $categories = Category::all(); 
+        return view('task.create',compact('categories'));
     }
 
     /**
@@ -33,6 +35,7 @@ class TaskController extends Controller
             [
                 'name' => 'required|min:3|max:10',
                 'description' => 'nullable|max:500',
+                'category_id' => 'string'
             ],
             [   //exemple de personalització dels errors de validació
                 'name.required' => 'El nom de la tasca és obligatori.',
@@ -53,7 +56,10 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return view('task.show', compact('task'));
+        //recuperem l'objecte categoria associat a category_id
+        $category = $task->category();
+        
+        return view('task.show', compact('task','category'));
     }
 
     /**

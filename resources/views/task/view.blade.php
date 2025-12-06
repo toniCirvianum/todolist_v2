@@ -14,11 +14,17 @@
 
     <div class="flex items-center justify-between mb-6">
         <h1 class="text-2xl font-bold">Llista de tasques</h1>
+        <div class="flex gap-3">
+            <a href="{{ route('categories.create') }}"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow hover:shadow-lg transition">
+                + Crear categoria
+            </a>
 
-        <a href="{{ route('tasks.create') }}"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow hover:shadow-lg transition">
-            + Crear tasca
-        </a>
+            <a href="{{ route('tasks.create') }}"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow hover:shadow-lg transition">
+                + Crear tasca
+            </a>
+        </div>
     </div>
 
     <table class="min-w-full bg-white border border-gray-300 shadow-xl rounded-lg overflow-hidden">
