@@ -17,3 +17,6 @@ Route::get('/categories/create', [CategoryController::class, 'create'])
 
 Route::post('/categories', [CategoryController::class, 'store'])
     ->name('categories.store');
+
+Route::get('/catgories/show', [CategoryController::class, 'show'])
+    ->name('categories.show');

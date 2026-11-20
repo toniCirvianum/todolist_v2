@@ -15,8 +15,13 @@
     <div class="flex items-center justify-between mb-6">
         <h1 class="text-2xl font-bold">Llista de tasques</h1>
         <div class="flex gap-3">
+            <a href="{{ route('categories.show') }}"
+                class="bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow hover:shadow-lg transition">
+                Veure Categories
+            </a>
+
             <a href="{{ route('categories.create') }}"
-                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow hover:shadow-lg transition">
+                class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-lg shadow hover:shadow-lg transition">
                 + Crear categoria
             </a>
 

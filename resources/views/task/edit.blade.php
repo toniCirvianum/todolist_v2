@@ -9,7 +9,7 @@
     <form action="{{ route('tasks.update', $task->id) }}" method="POST" class="space-y-4">
         @csrf
         @method('PUT')
-
+        
         <div>
             <label class="font-semibold">Nom</label>
             <input type="text" name="name" value="{{ $task->name }}"

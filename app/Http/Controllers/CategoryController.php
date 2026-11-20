@@ -29,4 +29,10 @@ class CategoryController extends Controller
     public function create() {
         return view ('category.create');
     }
+
+    public function show() {
+
+        $categories=Category::all();
+        return view('category.show',compact('categories'));
+    }
 }

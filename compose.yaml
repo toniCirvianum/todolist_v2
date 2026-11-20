@@ -65,4 +65,5 @@ networks:
         driver: bridge
 volumes:
     sail-mysql:
+        name: todolist_v2
         driver: local

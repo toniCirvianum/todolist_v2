@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('tasks', function (Blueprint $table) {
-            $table->foreignId('category_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreignId('category_id')->nullable()->constrained()->onDelete('set null')->after('name');
             // foreignId('category_id') → crea columna tipus unsigned big integer
             // constrained() → assumeix que la taula referenciada és categories
             // onDelete('set null') → si s’esborra una categoria, les tasques no s’esborren, només queda el camp a null
