@@ -37,6 +37,8 @@
             <tr>
                 <th class="py-3 px-4 text-left border-r border-blue-500">Nom de la tasca</th>
                 <th class="py-3 px-4 text-left border-r border-blue-500">Descripció</th>
+                <th class="py-3 px-4 text-left border-r border-blue-500">Categoria</th>
+
                 <th class="py-3 px-4 text-center font-semibold">Accions</th>
             </tr>
         </thead>
@@ -45,6 +47,7 @@
             <tr class="even:bg-gray-50 odd:bg-white hover:bg-blue-100 transition-colors border-b border-gray-200">
                 <td class="py-3 px-4 border-r border-gray-200">{{$task->name}}</td>
                 <td class="py-3 px-4">{{$task->description}}</td>
+                <td class="py-3 px-4">{{$task->category->name}}</td>
 
                 <td class="py-3 px-4 text-center space-x-2 flex justify-center">
 
